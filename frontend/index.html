@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cadastro de Questões - OBE</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <header>
+    <div class="container">
+      <h1>Olimpíada Brasileira de Estatística</h1>
+      <nav>
+        <ul>
+          <li><a href="#">Início</a></li>
+          <li><a href="#">Cadastrar Questão</a></li>
+          <li><a href="#">Gerenciar Questões</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <main class="container">
+    <section class="form-section">
+      <h2>Cadastrar Nova Questão</h2>
+      <form id="question-form">
+        <div class="form-group">
+          <label>Enunciado</label>
+          <textarea name="enunciado" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <label>Alternativas</label>
+          <input type="text" name="alternativa_a" placeholder="Alternativa A" required />
+          <input type="text" name="alternativa_b" placeholder="Alternativa B" required />
+          <input type="text" name="alternativa_c" placeholder="Alternativa C" required />
+          <input type="text" name="alternativa_d" placeholder="Alternativa D" required />
+          <input type="text" name="alternativa_e" placeholder="Alternativa E" required />
+        </div>
+
+        <div class="form-group">
+          <label for="gabarito">Gabarito</label>
+          <select name="gabarito" required>
+            <option value="">Selecione</option>
+            <option value="A">A</option>
+            <option value="B">B</option>
+            <option value="C">C</option>
+            <option value="D">D</option>
+            <option value="E">E</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Resolução</label>
+          <textarea name="resolucao" required></textarea>
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="elaborador" placeholder="Nome do Elaborador" required />
+          <input type="text" name="nivel_dificuldade" placeholder="Nível de Dificuldade" required />
+        </div>
+
+        <div class="form-group">
+          <input type="text" name="conhecimentos" placeholder="Conhecimentos Relacionados" required />
+          <input type="text" name="referencia_bibliografica" placeholder="Referência Bibliográfica" required />
+          <input type="text" name="tema" placeholder="Tema" required />
+        </div>
+
+        <div class="form-group">
+          <label>Status</label>
+          <select name="status" required>
+            <option value="">Selecione</option>
+            <option value="Nunca usada">Nunca usada</option>
+            <option value="Usada">Usada</option>
+          </select>
+        </div>
+
+        <div class="form-group">
+          <label>Validada?</label>
+          <select name="validada" required>
+            <option value="0">Não</option>
+            <option value="1">Sim</option>
+          </select>
+        </div>
+
+        <button type="submit">Cadastrar Questão</button>
+      </form>
+
+      <div id="form-message"></div>
+    </section>
+  </main>
+
+  <footer>
+    <div class="container">
+      <p>&copy; 2025 Olimpíada Brasileira de Estatística. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+  <script src="script.js"></script>
+</body>
+</html>
