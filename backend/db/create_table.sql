@@ -1,0 +1,20 @@
+CREATE TABLE Questoes (
+    id INT PRIMARY KEY IDENTITY(1,1),
+    enunciado TEXT NOT NULL,
+    alternativa_a VARCHAR(255) NOT NULL,
+    alternativa_b VARCHAR(255) NOT NULL,
+    alternativa_c VARCHAR(255) NOT NULL,
+    alternativa_d VARCHAR(255) NOT NULL,
+    alternativa_e VARCHAR(255) NOT NULL,
+    gabarito CHAR(1) NOT NULL,
+    resolucao TEXT NOT NULL,
+    elaborador VARCHAR(255) NOT NULL,
+    nivel_dificuldade VARCHAR(50) NOT NULL,
+    conhecimentos TEXT NOT NULL,
+    referencia_bibliografica TEXT NOT NULL,
+    tema VARCHAR(255) NOT NULL,
+    status VARCHAR(50) NOT NULL,
+    validada BIT NOT NULL DEFAULT 0,
+    nivel_dificuldade_apos_validacao VARCHAR(50),
+    validador VARCHAR(255)
+);
